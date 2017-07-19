@@ -1,0 +1,22 @@
+import("AER")
+import("Formula")
+
+importFrom("lmtest", "coeftest")
+importFrom("sandwich", "vcovHC")
+importFrom("grDevices", "dev.new", "gray")
+importFrom("graphics", "abline", "axis", "image", "layout", "mtext",
+           "par", "plot", "rect", "segments", "text", "title")
+importFrom("stats", ".getXlevels", "delete.response", "lm", "lm.fit",
+           "lm.wfit", "model.matrix", "model.offset", "model.response",
+           "model.weights", "pnorm", "qt", "terms", "update")
+			 
+export("ivreg.EX", "ivreg.fit.EX", "coeftestIV", "plot_confregion", "sensIvreg", "senslm")
+
+S3method("sensIvreg", "ivreg")
+S3method("sensIvreg", "ivregEX")
+S3method("plot", "ivregDecision")
+S3method("plot", "ivregDecisionList")
+S3method("plot", "sensIvregEX")
+S3method("plot", "si")
+S3method("print", "ivregDecision")
+S3method("print", "si")
